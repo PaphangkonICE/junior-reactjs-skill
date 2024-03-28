@@ -60,13 +60,14 @@ function App() {
 
   return (
     <div className='max-w-5xl p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700'>
+      <button onClick={addFav}>Add to faverion</button>
       <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
         <div>
           {loading ? <p><Loading className=""></Loading></p> 
           : 
           <>
             <h1>{poke.name}</h1>
-            <button onClick={addFav}>Add to faverion</button>
+            <button>Add to faverion</button>
             <br />
             <img src={poke?.sprites?.other.home.front_default} alt={poke?.name} />
             <ul>
